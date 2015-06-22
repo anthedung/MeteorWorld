@@ -1,0 +1,61 @@
+<head>
+  <title>Lucky Search</title>
+</head>
+
+<body>
+	<div class="swfsample" align="center">	
+		<p height="10" id="sourceText" align="center" font-style="italics" text=" " >(www.flashppt.com)</p>
+	  	<object id="swfsampleImg" type="application/x-shockwave-flash" data="http://www.flashppt.com/images/tangramone.swf" 
+	    width="250" height="250" align="center"> 
+
+		    <param name="movie" value="http://www.flashppt.com/images/tangramone.swf" />
+		    <param name="quality" value="high" />
+		</object>
+
+		<form id="searchbox" class="new-task">
+	    	<input id="search" type="text" name="text" placeholder="Hint: key 'Google' here " />
+	    	<input id="submit" type="submit" value="Feeling Lucky" onclick="">
+		</form>
+	</div>
+	<p align="center" id="result"></p>
+	{{> gallery}}
+
+	<br>
+	<p align="center"> ©2015 Subsidiary to AnTheDung.com </p>
+</body>
+
+<template id="ad" name="resultString">
+  
+</template>
+
+<template name="hello" class="resultString">
+  <p>Your search result for {{searchKey}}</p>
+</template>
+
+<template name="gallery">
+  {{#if isFirstRun}}
+  <div class="main" padding:>
+  	<p> [Ad]: Dream to be the next Google?<br>
+  	<a href="https://www.google.com.sg/about/careers/"> https://www.google.com.sg/about/careers/ </a>
+  	</p>
+  	<hr>
+
+  	<br/>
+  	<p> <a font-weight="bold" href="https://google.com"> Google</a>  <br>  
+  	Google main website<br>
+  	Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking ...
+  	</p>
+  	<p> <a href="https://google.com"> Google+</a>  <br>  
+  	https://plus.google.com<br>
+  	One Google Account for everything Google. About Google · Privacy · Terms · Help. Change language. ‪Afrikaans‬, ‪azərbaycan‬, ‪Bahasa Indonesia‬, ‪Bahasa‬ ...
+  	</p>
+  	<p> <a href="https://www.google.com.sg/about/careers/"> Google Career</a> Be the next Noogler</p>
+
+
+
+  </div>
+  {{/if}}
+  <div id="gallery">
+    <img src="{{selectedPhoto.url}}">
+  </div>    
+</template>  
